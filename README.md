@@ -4,9 +4,9 @@
 
 This is a personal project, aiming to build a CPU in RISC-V architecture.
 
-## Usage
+## Requirements
 
-### How to install the RV32GC toolchain (on MacOS)?
+### Install the RV32GC toolchain on MacOS
 
 Following the instructions on the opensource [riscv-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain). Specifically on MacOS M2 chip, cd into a folder, then (make sure you have installed `brew`):
 
@@ -44,3 +44,30 @@ riscv32-unknown-elf-objdump --version
 riscv32-unknown-elf-objcopy --version
 ```
 
+### Install `ghdl` toolchain on MacOS
+
+See [here](https://marcobisky.github.io/p/rtl-analysis-on-macos-under-300mb/) for installing the `ghdl` toolchain on MacOS.
+
+## Simulation in VHDL
+
+Use `Digital` to open `./netlist/digital/main.dig`, you can directly run simulation here. Or you can export the VHDL description of `main.dig` in `./netlist/vhdl` folder, then run:
+
+```bash
+cd netlist/vhdl/
+python3 split.py
+make run CIRCUIT=main
+```
+
+Since `Digital` export all VHDL description for all submodules in one file, one need `split.py` to split them into different files in `./netlist/vhdl/src/` folder. At the same time, `split.py` will also generate the `Makefile` in the currect folder for using `ghdl` to compile. If you want to simulate other modules (other than `main.vhdl`), just write a testbench file in `./netlist/vhdl/tb/` folder and run:
+
+```bash
+make run CIRCUIT=<your_module>
+```
+
+You can run
+
+```bash
+make help
+```
+
+to see how to use it.
