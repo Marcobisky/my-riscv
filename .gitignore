@@ -1,2 +1,4 @@
 .DS_Store
 /netlist/vhdl/build/
+/netlist/src/*.hex
+/netlist/src/objs

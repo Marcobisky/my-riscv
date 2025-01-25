@@ -31,8 +31,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>7f,f3,37,b7,37,83,23,13,93,e3,37,13,11*f3,37,13,f3,93,13,93,13
-,93,93,97,e7</data>
+          <data>7f,37,b7,37,13,83,23,13,93,e3,b7,37,b7,37,97,e7</data>
         </entry>
       </elementAttributes>
       <pos x="640" y="220"/>
@@ -54,7 +53,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>0,12,3,3,3e,45,80,3,83,e8,3,3,11*13,2e,e,13,2,3,3,e,e,5,0,80</data>
+          <data>0,3,3,e,e,45,80,3,83,e8,2,3,3,e,0,80</data>
         </entry>
       </elementAttributes>
       <pos x="780" y="220"/>
@@ -76,7 +75,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>5*0,3,b3,13,13,c3,0,3,13,10,20,30,40,50,10,20,30,40,40,0,8e,e</data>
+          <data>4*0,e,3,b3,13,13,c3,5*0,80</data>
         </entry>
       </elementAttributes>
       <pos x="940" y="220"/>
@@ -98,7 +97,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>80,30,40,2,2,4*0,ff,c0,10,30,4*f1,30,4*34,30,0,80,30,6*0,82,f8</data>
+          <data>80,40,2,2,2,4*0,ff,4*0,82,fc</data>
         </entry>
       </elementAttributes>
       <pos x="1120" y="220"/>

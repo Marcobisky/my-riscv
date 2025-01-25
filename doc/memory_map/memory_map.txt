@@ -1,0 +1,41 @@
+0xC0000000 -> uart DMA base (upward growth)
+  Gap: 1 GB
+0x80000000 -> rom boot base
+  Gap: 1 GB
+0x40000000 -> ssd load base
+  Gap: 992 MB
+0x02000000 -> kernel memory base
+  Gap: 11 MB
+0x01100000 -> kernel heap base (upward growth)
+  Gap: 1 MB
+0x01000000 -> kernel stack base (downward growth)
+
+0xB0000000 -> mtimecmp low 32bits
+  Gap: 4 B
+0xB0000004 -> mtimecmp high 32bits
+  Gap: 4 B
+0xB0000008 -> mtime low 32bits (read only)
+  Gap: 4 B
+0xB000000C -> mtime high 32bits (read only)
+  Gap: 4 KB
+0xB0001000 -> peripheral interrupts code (read only)
+
+0xA0000000 -> GPIO setbits 32bits (low 10 bits are used, 1 output, 0 input)
+  Gap: 4 B
+0xA0000004 -> GPIO bits 32bits (low 10 bits are used)
+  Gap: 4 B
+0xA0000008 -> GPIO interrupts clear 32bits (set to 0x0)
+  Gap: 244 B
+0xA0000100 -> uart config address (reserved)
+  Gap: 4 B
+0xA0000104 -> uart write data buffer address
+  Gap: 4 B
+0xA0000108 -> set uart current read end address
+  Gap: 4 B
+0xA000010C -> get uart current read buffer end address (read only)
+  Gap: 4 B
+0xA0000110 -> get uart current status bit 0 writeable other bits reserved (read only)
+  Gap: 240 B
+0xA0000200 -> IIC operation config address
+  Gap: 4 B
+0xA0000204 -> IIC read buffer address

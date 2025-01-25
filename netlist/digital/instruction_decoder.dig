@@ -627,18 +627,18 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>mechie_op</string>
+          <string>csr_op</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>8</int>
+          <int>6</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="2280" y="800"/>
+      <pos x="2280" y="480"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1011,18 +1011,18 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>csr_op</string>
+          <string>jmp_op</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>6</int>
+          <int>9</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="2280" y="480"/>
+      <pos x="1540" y="0"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1215,18 +1215,18 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>jmp_op</string>
+          <string>alu_op</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>9</int>
+          <int>19</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1540" y="0"/>
+      <pos x="1500" y="-940"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1549,18 +1549,18 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>alu_op</string>
+          <string>mem_op</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>19</int>
+          <int>9</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1500" y="-940"/>
+      <pos x="1340" y="-260"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1753,18 +1753,18 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>mem_op</string>
+          <string>mechie_op</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>9</int>
+          <int>8</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>bin</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1340" y="-260"/>
+      <pos x="2280" y="800"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>

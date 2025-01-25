@@ -1,4 +1,5 @@
 OBJDIR := ./objs
+FILENAME := boot
 
 CC              := riscv32-unknown-elf-gcc       # C Compiler
 AS              := riscv32-unknown-elf-as        # Assembler
@@ -8,7 +9,7 @@ OBJCOPY         := riscv32-unknown-elf-objcopy   # Convert ELF to Binary
 
 READELF		    := riscv32-unknown-elf-readelf   # ELF file reader
 
-all: $(OBJDIR)/test.bin
+all: $(OBJDIR)/boot.bin $(OBJDIR)/test.bin
 
 # Compile .asm files
 $(OBJDIR)/%.o: %.asm
@@ -16,8 +17,13 @@ $(OBJDIR)/%.o: %.asm
 	$(AS) -march=rv32i_zicsr -mabi=ilp32 -o $@ $^
 
 # .o to .elf, disassemble .elf to .asm, and readelf
+$(OBJDIR)/boot.elf: $(OBJDIR)/boot.o
+	$(LD) -T boot.ld -o $@ $^
+	$(OBJDUMP) -D $@ > $@.asm
+	$(READELF) --sections $@
+
 $(OBJDIR)/test.elf: $(OBJDIR)/test.o
-	$(LD) -o $@ $^
+	$(LD) -T test.ld -o $@ $^
 	$(OBJDUMP) -D $@ > $@.asm
 	$(READELF) --sections $@
 
@@ -28,3 +34,8 @@ $(OBJDIR)/%.bin: $(OBJDIR)/%.elf
 .PHONY: clean
 clean:
 	rm -rf *.bin* *.o *.elf* *.hex $(OBJDIR)
+
+.PHONY: hex
+hex:
+	python3 hexboot.py
+	python3 hextest.py
