@@ -1,3 +1,5 @@
+ENTRY(_start)
+
 MEMORY
 {
 	/* boot rom */
@@ -6,8 +8,6 @@ MEMORY
 	PERIPHERAL(rwx): ORIGIN = 0xA0000000, LENGTH = 128K
 	RAM (rwx) : ORIGIN = 0x02000000, LENGTH = 128K
 }
-
-ENTRY(_start)
 
 SECTIONS
 {

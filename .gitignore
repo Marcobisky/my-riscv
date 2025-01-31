@@ -2,3 +2,5 @@
 /netlist/vhdl/build/
 /netlist/src/*.hex
 /netlist/src/objs
+
+/doc/stm32f103c8t6/

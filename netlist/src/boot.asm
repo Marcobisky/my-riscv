@@ -7,8 +7,8 @@ _start:
     li t1, 0x40000000
     # kernel memory base
     li t2, 0x02000000
-    # total 32 bytes
-    li t3, 0x02000020
+    # total 2048 bytes
+    li t3, 0x02000800
 
 load:
     lbu a1, 0(t1)

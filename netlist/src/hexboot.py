@@ -15,16 +15,16 @@ with open('./objs/boot.bin',mode='rb') as f:
         hex4text += f'{hexs[i+3]}\n'
         i += 4
 
-with open('./1.hex',mode='w') as f:
+with open('./0.hex',mode='w') as f:
     f.write(hex1text)
 
-with open('./2.hex',mode='w') as f:
+with open('./1.hex',mode='w') as f:
     f.write(hex2text)
 
-with open('./3.hex',mode='w') as f:
+with open('./2.hex',mode='w') as f:
     f.write(hex3text)
 
-with open('./4.hex',mode='w') as f:
+with open('./3.hex',mode='w') as f:
     f.write(hex4text)
 
     
