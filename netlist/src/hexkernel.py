@@ -8,5 +8,5 @@ with open('./objs/kernel.bin',mode='rb') as f:
         kerneltext += f'{hexs[i]}\n'
         i += 1
     
-with open('./kernel.hex',mode='w') as f:
+with open('./hex/kernel.hex',mode='w') as f:
     f.write(kerneltext)

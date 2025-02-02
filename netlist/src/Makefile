@@ -1,4 +1,5 @@
 OBJDIR := ./objs
+HEXDIR = ./hex
 
 CC              := riscv32-unknown-elf-gcc       # C Compiler
 AS              := riscv32-unknown-elf-as        # Assembler
@@ -51,16 +52,19 @@ $(OBJDIR)/%.bin: $(OBJDIR)/%.elf
 
 .PHONY: clean
 clean:
-	rm -rf *.bin* *.o *.elf* *.hex $(OBJDIR)
+	rm -rf *.bin* *.o *.elf* *.hex $(OBJDIR) $(HEXDIR)
 
 .PHONY: hex
 hex_boot: $(OBJDIR)/boot.bin
+	mkdir -p $(HEXDIR)
 	python3 hexboot.py
 
 hex_kernel: $(OBJDIR)/kernel.bin
+	mkdir -p $(HEXDIR)
 	python3 hexkernel.py
 
 hex_test: $(OBJDIR)/test.bin
+	mkdir -p $(HEXDIR)
 	python3 hextest.py
 
 hex: hex_boot hex_kernel hex_test

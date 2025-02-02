@@ -15,5 +15,8 @@ void set_all_pins_mode(int mode);
 // gpio value set functions
 void set_pin(int pin, int value);
 void set_all_pins(int value);
+// gpio value get functions
+int get_pin(int pin);
+int get_all_pins(void);
 
 #endif

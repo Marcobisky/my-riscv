@@ -1753,7 +1753,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>mechie_op</string>
+          <string>machine_op</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -2212,7 +2212,7 @@
           <string>EN</string>
         </entry>
       </elementAttributes>
-      <pos x="0" y="300"/>
+      <pos x="-20" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2222,21 +2222,7 @@
           <string>en</string>
         </entry>
       </elementAttributes>
-      <pos x="0" y="300"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>en</string>
-        </entry>
-      </elementAttributes>
-      <pos x="60" y="380"/>
+      <pos x="0" y="320"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -2869,16 +2855,16 @@
       <p2 x="160" y="460"/>
     </wire>
     <wire>
-      <p1 x="1780" y="460"/>
-      <p2 x="1820" y="460"/>
-    </wire>
-    <wire>
       <p1 x="160" y="460"/>
       <p2 x="200" y="460"/>
     </wire>
     <wire>
       <p1 x="1820" y="460"/>
       <p2 x="1860" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="1780" y="460"/>
+      <p2 x="1820" y="460"/>
     </wire>
     <wire>
       <p1 x="1920" y="-720"/>
@@ -3097,7 +3083,11 @@
       <p2 x="660" y="380"/>
     </wire>
     <wire>
-      <p1 x="60" y="380"/>
+      <p1 x="-20" y="380"/>
+      <p2 x="0" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="380"/>
       <p2 x="100" y="380"/>
     </wire>
     <wire>
@@ -3119,6 +3109,10 @@
     <wire>
       <p1 x="160" y="140"/>
       <p2 x="160" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="320"/>
+      <p2 x="0" y="380"/>
     </wire>
     <wire>
       <p1 x="2180" y="-800"/>

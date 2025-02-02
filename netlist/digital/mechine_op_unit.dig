@@ -19,7 +19,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>mechine_op</string>
+          <string>machine_op</string>
         </entry>
         <entry>
           <string>Bits</string>

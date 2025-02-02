@@ -10,6 +10,8 @@ This is a personal project starts at Jan 14th, 2025, aiming to build a CPU in RI
 
 ![100%](https://progress-bar.xyz/100?title=GPIO-output)
 
+![100%](https://progress-bar.xyz/100?title=C-environment)
+
 ![60%](https://progress-bar.xyz/60?title=Execution)
 
 ![10%](https://progress-bar.xyz/10?title=Interrupt)
@@ -18,7 +20,7 @@ This is a personal project starts at Jan 14th, 2025, aiming to build a CPU in RI
 
 Check out [doc](./doc/README.md) (not yet finished).
 
-## See Our Final Work
+## See Our Work So-far
 
 ### Install the RV32GC toolchain on MacOS
 

@@ -1,3 +1,4 @@
+# Test.asm is a simple independent assembly code to downloaded to the program ROM (nothing to do with the main kernel)
 .section .text
 .globl _start
 _start:

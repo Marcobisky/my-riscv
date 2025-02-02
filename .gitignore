@@ -1,6 +1,11 @@
 .DS_Store
 /netlist/vhdl/build/
+
 /netlist/src/*.hex
+/netlist/src/*.elf*
+/netlist/src/*.o
+/netlist/src/*.bin*
 /netlist/src/objs
+/netlist/src/hex
 
 /doc/stm32f103c8t6/

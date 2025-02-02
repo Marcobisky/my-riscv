@@ -23,3 +23,11 @@ void set_pin(int pin, int value) {
 void set_all_pins(int value) {
     *(int*)GPIO_DATA_ADDR = value;
 }
+
+int get_all_pins(void) {
+    return *(int*)GPIO_DATA_ADDR;
+}
+
+int get_pin(int pin) {
+    return *(int*)GPIO_DATA_ADDR & (1 << (pin - 1));
+}
