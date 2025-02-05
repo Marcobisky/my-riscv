@@ -100,6 +100,24 @@ This will generate `./objs/` and a bunch of `.hex` files in the current folder. 
 
 ![Set GPIO1 high](./doc/images/GPIO.png)
 
+### `Digital` + Verilog Plan (recommended)
+
+For those of you familiar with `verilog`, but think that simulating the whole circuit using testbenches is not very visual. I recommend you write each block in `verilog`, then use `External File` block and link to the `.v` file in the path. Don't forget to change the iverilog path in the settings to something like:
+
+```bash
+/opt/homebrew/Cellar/icarus-verilog/12.0/bin/iverilog
+```
+
+and the iverilog options to:
+
+```bash
+-I /path/to/the/files/to/include
+```
+
+There is a bug in `Digital` though, you may need to modify the code so that the inputs and outputs are correctly filled in first, then click `Check`.
+
+![](./doc/images/external_file.png)
+
 ---
 
 Get in touch: **Jinming Ren** (3191293752@qq.com)

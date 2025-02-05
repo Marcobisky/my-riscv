@@ -1,6 +1,6 @@
 ## Introduction
 
-The 32 registers in RISC-V are called general-purpose registers (GPRs). They are used for various purposes, such as holding data, addresses, or temporary values during program execution. These registers are 32 bits wide in the RV32I ISA and are identified as x0 to x31.
+The 32 registers in RISC-V are called general-purpose registers (GPRs, or "integer registers"). They are used for various purposes, such as holding data, addresses, or temporary values during program execution. These registers are 32 bits wide in the RV32I ISA and are identified as x0 to x31.
 
 Each register has a conventional name that indicates its intended usage, although these names are just conventions, and you can use them for other purposes if needed.
 

@@ -98,6 +98,6 @@ help:
 	@echo "                Example: make run CIRCUIT=main"
 	@echo
 	@echo "Note: "
-	@echo "                The testbench file must be located in the 'testbench' directory."
-	@echo "                All circuit files are located in the 'dataflow' directory."
+	@echo "                The testbench file must be located in the 'tb' directory."
+	@echo "                All circuit files are located in the 'src' directory."
 	

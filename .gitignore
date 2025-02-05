@@ -1,5 +1,6 @@
 .DS_Store
-/netlist/vhdl/build/
+.vscode
+build/
 
 /netlist/src/*.hex
 /netlist/src/*.elf*
@@ -7,5 +8,9 @@
 /netlist/src/*.bin*
 /netlist/src/objs
 /netlist/src/hex
+*.vcd
+*.vvp
 
 /doc/stm32f103c8t6/
+/doc/datasheet
+/doc/examples

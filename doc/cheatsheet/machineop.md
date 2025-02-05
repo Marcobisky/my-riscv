@@ -2,6 +2,16 @@
 
 One category of instructions is machine operations (abbr. machineop), which is a set of *privileged* instructions in the RISC-V privileged architecture. These instructions are all related to the [CSRs](csr.md), so make sure you are familiar with those registers first.
 
+## RISCV Privilege Levels from High to Low
+
+* Debug (D)
+* Machine (M): "must-have"
+* Supervisor (S)
+    - Hypervisor-extended Supervisor (HS)
+    - Virtual Supervisor (VS)
+    - Virtual User (VU)
+* User (U)
+
 ## Commonly Used machineop instructions
 
 ### `mret`
