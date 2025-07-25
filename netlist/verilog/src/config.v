@@ -1,4 +1,4 @@
-`define XLEN 32
+`define XLEN 32 // GPRs are 32-bit
 `define MAX_BIT_POS (`XLEN-1)
 `define CACHE_LINES 64
 `define CACHE_LINE_SIZE 16

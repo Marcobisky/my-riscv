@@ -40,11 +40,15 @@ YOSYS: $(VOBJS) | $(BUILD_DIR)
 NETLISTSVG: $(BUILD_DIR)/$(CIRCUIT).json | $(BUILD_DIR)
 	netlistsvg $(BUILD_DIR)/$(CIRCUIT).json -o $(BUILD_DIR)/$(CIRCUIT).svg
 
+# Use gtkwave to visualize the waveform
+GTKWAVE: $(BUILD_DIR)/$(TB).vcd
+	gtkwave $(BUILD_DIR)/$(TB).vcd
+
 # Schematic diagram only: Synthesis then Visualization
 schematic: YOSYS NETLISTSVG
 
 # Run all steps
-run: iverilog vvp schematic
+run: iverilog vvp schematic GTKWAVE
 
 # Clean build directory
 clean:

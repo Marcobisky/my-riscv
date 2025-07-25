@@ -14,3 +14,8 @@ build/
 /doc/stm32f103c8t6/
 /doc/datasheet
 /doc/examples
+
+# These are folders during testing
+/netlist/vivado
+/netlist/platformio
+/netlist/ice40

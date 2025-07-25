@@ -1,4 +1,4 @@
-/*                                                                      
+/*                                                       
 Description: register file
     寄存器文件 csr 寄存器,12位地址,只实现部分机器模式寄存器
     写入读取都是单周期完成
@@ -58,10 +58,11 @@ module registers_csr(
 
     reg [63:0] mtime;
     reg [63:0] mtimecmp;
-    reg int_proc_state; // 1 中断处理中，这是不再发出中断信号
+    reg int_proc_state; // 1 中断处理中，这时不再发出中断信号, 因为暂时不支持中断嵌套
 
     wire peripheral_int, software_int, timer_int;
 
+    // priority: peripheral_int > software_int > timer_int
     assign peripheral_int = mstatus[3] & mip[11] & mie[11];
     assign software_int = mstatus[3] & mip[3] & mie[3] & (!peripheral_int);
     assign timer_int = mstatus[3] & mip[7] & mie[7] & (!peripheral_int & !software_int);
@@ -89,12 +90,13 @@ module registers_csr(
     end
 
     /* verilator lint_off LATCH */
+    // Set mip register according to the input interrupt code
     always @(*) begin
         if (!rst) begin
             mip = `XLEN'd0;
         end
         else begin
-            if (|(peripheral_int_code)) begin
+            if (|(peripheral_int_code)) begin // at least one bit in peripheral_int_code is 1
                 mip[11] = 1'b1;
                 cur_int_code = peripheral_int_code;
             end
@@ -117,6 +119,7 @@ module registers_csr(
         end
     end
 
+    // increase mtime every clock cycle
     always @(posedge clk_timer or negedge rst) begin
         if (!rst) begin
             mtime <= 64'd0;

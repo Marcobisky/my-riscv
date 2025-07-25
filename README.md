@@ -1,6 +1,6 @@
 ## Project Description
 
-This is a personal project starts at Jan 14th, 2025, aiming to build a CPU in RISC-V architecture. The persuit of this project is to create a beginner-friendly way of self-learning how a computer (or a micro-controller) works. The creation of this project heavily referenced [riscv-mcu](https://github.com/renyangang/riscv-mcu/tree/master) repository. The objective of this project is to **physically** build a RISCV CPU from scratch, i.e. we are going to use logic gates, simulation tools like VHDL, search for suitable chips, draw PCBs, etc. Hopefully it has peripherals like IIC, GPIOs, UART, etc. Running early versions of linux on it will be even better! 
+This is a personal project starts at Jan 14th, 2025, aiming to build a CPU in RISC-V architecture. The persuit of this project is to create a beginner-friendly way of self-learning how a computer (or a micro-controller) works. The creation of this project heavily referenced [riscv-mcu](https://github.com/renyangang/riscv-mcu/tree/master) repository. The objective of this project is to **physically** build a RISCV CPU from scratch, i.e. we are going to use logic gates, simulation tools like VHDL/Verilog, search for suitable chips, draw PCBs, etc. Hopefully it has peripherals like IIC, GPIOs, UART, etc. Running early versions of linux on it will be even better! 
 
 **Progress:**
 
@@ -117,6 +117,10 @@ and the iverilog options to:
 There is a bug in `Digital` though, you may need to modify the code so that the inputs and outputs are correctly filled in first, then click `Check`.
 
 ![](./doc/images/external_file.png)
+
+### Collaborate with iCE-40 Board
+
+See [this document](./netlist/verilog/README.md).
 
 ---
 
