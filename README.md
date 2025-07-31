@@ -1,20 +1,38 @@
-## Project Description
+## Project Motivation
 
-This is a personal project starts at Jan 14th, 2025, aiming to build a CPU in RISC-V architecture. The persuit of this project is to create a beginner-friendly way of self-learning how a computer (or a micro-controller) works. The creation of this project heavily referenced [riscv-mcu](https://github.com/renyangang/riscv-mcu/tree/master) repository. The objective of this project is to **physically** build a RISCV CPU from scratch, i.e. we are going to use logic gates, simulation tools like VHDL/Verilog, search for suitable chips, draw PCBs, etc. Hopefully it has peripherals like IIC, GPIOs, UART, etc. Running early versions of linux on it will be even better! 
+The objective of this project is to build a fully functional RISC-V CPU that could run Linux. The materials is just a record of my personal learning journey, not on educational purpose (maybe future will be).
 
-**Progress:**
+### A Little Background
+
+This project originally started at Jan 14th, 2025 with the following objective: Build a CPU in RISC-V architecture in `Digital` software. Create a beginner-friendly way of self-learning how a computer (or a micro-controller) works. The creation of this project heavily referenced [riscv-mcu](https://github.com/renyangang/riscv-mcu/tree/master) repository. The objective of this project is to **physically** build a RISCV CPU from scratch, i.e. we are going to use logic gates, simulation tools like VHDL/Verilog, search for suitable chips, draw PCBs, etc. Hopefully it has peripherals like IIC, GPIOs, UART, etc. Running early versions of linux on it will be even better! 
+
+After working on it for a few months, I successfully achieved:
 
 ![100%](https://progress-bar.xyz/100?title=Env-Config)
-
 ![100%](https://progress-bar.xyz/100?title=Decoder)
-
 ![100%](https://progress-bar.xyz/100?title=GPIO-output)
-
 ![100%](https://progress-bar.xyz/100?title=C-environment)
-
 ![60%](https://progress-bar.xyz/60?title=Execution)
-
 ![10%](https://progress-bar.xyz/10?title=Interrupt)
+
+Then I take a long break for school work until recently -- 2025-7-21 -- while I was ambitiously learning computer architecture using materials from an amazing project YSYX, not gonna lie, I felt deeply depressed by its:
+
+- **Unhealthy concentration of RTFM (Read the F\*\*king Manual)** and so on, which is didactic, uninformative and uninspiring.
+- **Overly-intentional stress on the use of tools** like vim, debuggers, etc., before stepping into the real thing.
+- **Misleadingly ordered "level" from F (lowest) to A**, which to me is insanely frustrating. The contents are good but the order is created from nothing. One could be proficient in level B but have no idea about level E.
+
+
+I can't say they are wrong, but it's just not inspiring and motivating personally. So I decided to build everything by myself and regard YSYX project as one of the many references.
+
+### How to Learn
+
+For me, the current plan was: 
+
+- **Learn everything simultaneously** -- as long as you truely admire it, everything will be one finally. OS, verilog, architecture, whatever.
+- **Do not dive into full-time coding immediately**. Full-time coding acts like glue that sticks the pieces you've learned. Without pieces, there's nothing to glue.
+- **Nothing is sacred**. RISCV, pipelining, CSRs, etc., you should understand why they are there, do not regard their specifications as the ultimate truth! This is very much like concepts like "groups, rings, etc" in mathematics. They seem to be inviolable at first that deserves engraved in your notes, but you will soon find there are numerous concepts like "semi-groups, topological groups, lie groups, etc." They are just the abstraction of the objects that we frequently encounter, you can invent one if you want, like "topological semi-groups, etc." 
+
+
 
 ## Learning Trajactory
 
