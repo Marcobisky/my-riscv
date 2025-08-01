@@ -53,7 +53,11 @@ The registers are labelled in this format: `reg (addr, reset_val)`.
         - 01: Vectored. Exceptions will set `PC` *directly* to `BASE`, while (asynchronous) interrupts will set `PC` to `BASE`+4*`mcause.Exception Code` (See `mcause` register.)
         - others: invalid.
 
-6.	`mepc (0x341, 0x00000000)`: Machine Exception Program Counter, saves the address of the interrupted instruction. When an exception is encountered, the current program counter is saved in `mepc`, and the core jumps to the exception address. When a `mret` instruction is executed, the value from `mepc` replaces the current program counter.
+6.	`mepc (0x341, 0x00000000)`: Machine Exception Program Counter, saves the address of the interrupted instruction. 
+    - When an interrupt occurs, the current PC + 1 is saved in `mepc`.
+    - When an exception is encountered, the current PC is saved in `mepc`. (Why? The exception may triggered by the instruction at the current PC, maybe we solve the exception in the interrupt handler, so give it another chance to execute that instruction again.)
+    
+    and the core jumps to the exception address. When a `mret` instruction is executed, the value from `mepc` replaces the current program counter. 
 
 7.	`mcause (0x342)`: Machine Trap Cause, identifies the cause of the interrupt/exception.
 ![`mcause`](mcause.png)
